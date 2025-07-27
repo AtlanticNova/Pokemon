@@ -73,7 +73,14 @@ class PokemonViewModel: ObservableObject {
     
     init() {
         Task {
-            pokemon = try await getPokemon()
+//            do {
+                pokemon = try await getPokemon()
+//                for p in pokemon {
+//                    print("ID: \(p.id), Name: \(p.name), Type: \(p.type), Attack: \(p.attack), Defense: \(p.defense)")
+//                }
+//            } catch {
+//                print("Failed to fetch Pokémon: \(error)")
+//            }
         }
     }
     func getPokemon() async throws -> [Pokemon] {
